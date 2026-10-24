@@ -9,4 +9,4 @@ Categories=AudioVideo;Audio;Player;
 Keywords=music;player;audio;lyrics;playlist;streaming;
 StartupNotify=true
 StartupWMClass=SPlayer-Next
-MimeType=x-scheme-handler/orpheus;audio/mpeg;audio/flac;audio/x-wav;audio/ogg;audio/x-vorbis+ogg;audio/x-opus+ogg;audio/mp4;audio/x-m4a;audio/m4a;audio/aac;audio/x-ms-wma;audio/x-ape;audio/x-dsf;audio/x-dff;audio/x-m4b;
+MimeType=x-scheme-handler/orpheus;

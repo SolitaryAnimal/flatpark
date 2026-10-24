@@ -20,8 +20,10 @@ finish-args:
   # runtime (org.freedesktop.Platform 26.08 ships them — checked against the
   # binary's NEEDED set, 0 missing).
   - --share=ipc
-  # Online lyrics, cover art, streaming servers (Subsonic/Navidrome/Jellyfin/
-  # Emby), Last.fm scrobbling and the app's HTTP/WebSocket control API.
+  # Online lyrics, cover art, self-hosted streaming servers (Subsonic/
+  # Navidrome/Jellyfin/Emby), the built-in NetEase Cloud Music / QQ Music /
+  # Kugou sources, the plugin market, Last.fm scrobbling and the app's
+  # HTTP/WebSocket control API.
   - --share=network
   - --socket=wayland
   - --socket=fallback-x11
@@ -56,7 +58,7 @@ finish-args:
   # Not granted by default — the app works without them; opt in per the
   # metainfo:
   #   --filesystem=xdg-download            -> store downloads in Downloads instead
-  #   --filesystem=home                    -> index music stored outside Music
+  #   --filesystem=/path/to/music          -> index music stored outside Music
   #   --filesystem=xdg-run/discord-ipc-0   -> Discord rich presence
 modules:
   - name: splayer-next

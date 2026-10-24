@@ -21,7 +21,9 @@
       <li>System media controls over MPRIS, a tray icon, desktop notifications, Last.fm scrobbling and optional Discord rich presence.</li>
       <li>Edits tags and cover art, and downloads tracks with a built-in download manager.</li>
     </ul>
-    <p>Permissions: the package can read and write your Music folder, which is where it looks for your library and where downloads go by default. It can play and record audio, show notifications, register a tray icon and media controls, and reach the network for lyrics, covers and streaming servers. It cannot see the rest of your home directory by default. Enable what you need with <code>flatpak override</code>:</p>
+    <p>The app also has built-in sources for NetEase Cloud Music, QQ Music and Kugou, including account login, search, streaming and lyrics. These are third-party services, and using them is subject to their own terms.</p>
+    <p>An optional plugin market installs third-party scripts, either from upstream's <code>SPlayer-Dev/plugins</code> repository or from a URL you provide. Those plugins are third-party code, are not part of this package, and are installed at your own choice.</p>
+    <p>Permissions: the package can read and write your Music folder, which is where it looks for your library and where downloads go by default. It can play and record audio, show notifications, register a tray icon and media controls, and reach the network for lyrics, covers, self-hosted streaming servers, the built-in NetEase Cloud Music, QQ Music and Kugou sources, and the plugin market. It cannot see the rest of your home directory by default. Enable what you need with <code>flatpak override</code>:</p>
     <ul>
       <li>Save downloads to Downloads instead of Music: <code>flatpak override --user --filesystem=xdg-download top.imsyy.splayer_next</code></li>
       <li>Index music stored elsewhere, for example an external drive: <code>flatpak override --user --filesystem=/path/to/music top.imsyy.splayer_next</code></li>
