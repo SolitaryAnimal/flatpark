@@ -19,8 +19,8 @@ published="$(jq -r '.publishTime // empty' <<<"$meta")"
 [ -n "$version" ] && [ -n "$published" ] || { echo "failed to read Animeko update info" >&2; exit 1; }
 version="${version#v}"
 
-# 6.4.0, or a prerelease suffix. Anything else is a layout change, not a pin.
-[[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+([-.][0-9A-Za-z.]+)?$ ]] \
+# Stable releases only (6.4.0). Anything else is a prerelease or a layout change, not a pin.
+[[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] \
     || { echo "unexpected Animeko version: $version" >&2; exit 1; }
 
 date="$(date -u -d "@$published" +%F)"
